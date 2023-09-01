@@ -1,17 +1,12 @@
-<header>
-    <div class="navbar navbar-dark bg-primary shadow-sm">
-        <div class="navbar-brand align-item-center d-flex">
-            <i style="font-size:30px;" class="fa-solid fa-bars"></i>&nbsp;
-            <i>
-                <strong style="font-size:30px;">Shrine</strong>
-            </i>
-               
-                    <span class="fas fa-search search-icon"></span>
-              
-                </div>
-                <button class="btn btn-primary">
-                    <i style="font-size:50px" class="fa-solid fa-sliders"></i>
-               <!-- <div style="font-size:10px" class="badge bg-danger"></div>     -->
-                </button>
-                </div>
-    </header>
+
+    <div class="card-container">
+
+        <div class="card" *ngFor="let item of items">
+         <img [src]="item.url" alt="{{ item.itemName }}">
+         <div class="card-content">
+           <p class="item-name">{{ item.itemName }}</p>
+           <p class="item-price">{{ item.itemPrice }} INR</p>
+           <p class="item-barcode">{{ item.itemBarcode }}</p>
+           <button color="primary">Add Product</button>
+         </div>
+       </div>

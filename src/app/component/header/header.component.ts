@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +9,16 @@ import { ApiService } from 'src/app/services/api.service';
 export class HeaderComponent {
 
   
+  public productList : any;
+  items: any[] = [];
+
+  constructor(private http : HttpClient){
+
+  }
+  ngOnInit() {
+    this.http.get('https://db.ezobooks.in/kappa/image/task').subscribe((data: any) => {
+      this.items = data.items;
+    });
+}
 
 }

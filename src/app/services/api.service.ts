@@ -6,13 +6,11 @@ import { map} from 'rxjs/operators'
   providedIn: 'root'
 })
 export class ApiService {
-url1="http://localhost:3000/items";
+ 
+  items: any[] = [];
+
 
   constructor(private http: HttpClient) { }
-  getProduct(){
-    return this.http.get<any>("https://db.ezobooks.in/kappa/image/task")
-    .pipe(map((res:any)=>{
-      return res;
-    }))
-  }
+  
+  
 }

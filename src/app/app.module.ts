@@ -6,23 +6,28 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './component/header/header.component';
-import { ProductsComponent } from './component/products/products.component';
+import { AtmComponent } from './atm/atm.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ProductsComponent,
+    AtmComponent,
+   
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   
   ],
   exports:[
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

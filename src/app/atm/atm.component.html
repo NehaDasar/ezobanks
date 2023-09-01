@@ -1,0 +1,11 @@
+<div class="atm">
+    <h1>ATM System</h1>
+    <p>Account Balance: {{ accountBalance }} INR</p>
+    <input type="number" [(ngModel)]="depositAmount" placeholder="Enter deposit amount">
+    <button (click)="deposit()">Deposit</button>
+    <input type="number" [(ngModel)]="withdrawAmount" placeholder="Enter withdrawal amount">
+    <button (click)="withdraw()">Withdraw</button>
+    <div *ngFor="let transaction of transactions">
+      {{ transaction }}
+    </div>
+  </div>

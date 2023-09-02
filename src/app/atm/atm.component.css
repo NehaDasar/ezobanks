@@ -1,0 +1,46 @@
+.textbox {
+    position:sticky;
+    z-index: 1;
+    /* Add any desired styling for the textbox */
+  }
+  .container{
+    background-image: url('/assets/images/image4.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.div-form{
+  top:30px;
+    width: 900px;
+    height: 550px;
+    text-align: center;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgb(220, 233, 237);
+}
+.heading-main {
+  color: blueviolet;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px red;
+}
+.btn-login{
+  padding: 2px 2px;
+  background-color: springgreen;
+  text-align: center;
+  color: rgb(10, 10, 10);
+  margin-left: 5px;
+  border: none;
+  font-size: 15px;
+}
+.btn-login1{
+  padding: 2px 2px;
+  background-color: rgb(255, 0, 93);
+  text-align: center;
+  color: rgb(10, 10, 10);
+  margin-left: 5px;
+  border: none;
+  font-size: 15px;
+}
+                                       

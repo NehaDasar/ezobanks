@@ -1,11 +1,54 @@
-<div class="atm">
-    <h1>ATM System</h1>
-    <p>Account Balance: {{ accountBalance }} INR</p>
-    <input type="number" [(ngModel)]="depositAmount" placeholder="Enter deposit amount">
-    <button (click)="deposit()">Deposit</button>
-    <input type="number" [(ngModel)]="withdrawAmount" placeholder="Enter withdrawal amount">
-    <button (click)="withdraw()">Withdraw</button>
-    <div *ngFor="let transaction of transactions">
-      {{ transaction }}
-    </div>
+
+  <div class="container">
+    <marquee class="heading-main" scrollAmount="17">Current Available Denomination in Machine</marquee>
+  <div class="div-form">
+  
+   <div>
+    <button style="font-weight: bold;">{{ fixedValue }}</button>&nbsp;
+    <input type="number" [(ngModel)]="num2" placeholder="0" (click)="performMultiplication()">&nbsp;
+     <input type="number"  placeholder="Result"  [(ngModel)]="result" >
   </div>
+  <div>
+    <button style="font-weight: bold;">{{ fixedValue1 }}</button>&nbsp;
+    <input type="number" [(ngModel)]="num3" placeholder="0" (click)="performMultiplication()">&nbsp;
+     <input type="number"  placeholder="Result"  [(ngModel)]="result1" >
+  </div>
+  <div>
+    <button style="font-weight: bold;">{{ fixedValue2 }}</button>&nbsp;
+    <input type="number" [(ngModel)]="num4" placeholder="0" (click)="performMultiplication()">&nbsp;
+     <input type="number"  placeholder="Result"  [(ngModel)]="result2" >
+  </div>
+  <div>
+    <button style="font-weight: bold;">{{ fixedValue3 }}</button>&nbsp;
+    <input type="number" [(ngModel)]="num5" placeholder="0" (click)="performMultiplication()">&nbsp;
+     <input type="number"  placeholder="Result"  [(ngModel)]="result3" >
+      <div>
+     <button style="font-weight: bold;" (click)="deposit()">Deposit</button>&nbsp;
+    <input type="number" [(ngModel)]="deposite" placeholder="0" >&nbsp;
+ </div>
+ <div>
+  <h5>Account Balance:</h5>&nbsp;
+  <label type="number">{{accountBalance}} INR</label>
+  </div>
+  <div>
+    <input [(ngModel)]="withdrawAmount" type="number" placeholder="Enter withdrawal amount">
+    <button (click)="withdraw()">Withdraw</button>
+  </div>
+  <div *ngIf="withdrawAmount">
+    Successful withdrawal of {{ withdrawAmount }}. New balance: {{ newBalance }}
+  </div>
+  </div>
+ </div>
+    <!-- <tr class="centered-row" *ngFor="let denomination of denominations">{{ denomination }}</tr> -->
+  <!-- <h4>Deposited Amount: {{ depositedAmount }}</h4>
+  <button class="btn-login" (click)="deposit(2000)">Deposit $2000</button>&nbsp;
+  <button  class="btn-login" (click)="deposit(500)">Deposit $500</button>&nbsp;
+  <button  class="btn-login" (click)="deposit(200)">Deposit $200</button>&nbsp;
+  <button  class="btn-login" (click)="deposit(100)">Deposit $100</button>
+  <h4>Withdrawn Amount: {{ withdrawnAmount }}</h4>
+  <button  class="btn-login1"(click)="withdraw(2000)">Withdraw $2000</button>
+  <button  class="btn-login1" (click)="withdraw(500)">Withdraw $500</button>
+  <button  class="btn-login1" (click)="withdraw(200)">Withdraw $200</button>
+  <button  class="btn-login1" (click)="withdraw(100)">Withdraw $100</button>
+  </div> -->
+</div>

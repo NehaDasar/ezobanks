@@ -10,11 +10,15 @@ import { AtmComponent } from './atm/atm.component';
 import { FormsModule } from '@angular/forms';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AtmComponent,
+  
+   
    
    
   ],
@@ -24,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   
+
   ],
   exports:[
     HttpClientModule,

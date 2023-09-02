@@ -5,10 +5,12 @@ import { AtmComponent } from './atm/atm.component';
 
 
 
+
 const routes: Routes = [
  
   {path: "headerComponent", component: HeaderComponent},
   {path: "atm", component: AtmComponent},
+   
 ];
 
 @NgModule({

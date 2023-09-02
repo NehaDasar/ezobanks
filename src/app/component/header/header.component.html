@@ -2,11 +2,11 @@
     <div class="card-container">
 
         <div class="card" *ngFor="let item of items">
-         <img [src]="item.url" alt="{{ item.itemName }}">
+         <img class="fixed-size-image" [src]="item.url" alt="">
          <div class="card-content">
            <p class="item-name">{{ item.itemName }}</p>
            <p class="item-price">{{ item.itemPrice }} INR</p>
            <p class="item-barcode">{{ item.itemBarcode }}</p>
-           <button color="primary">Add Product</button>
+           <button class="btn">Add Product</button>
          </div>
        </div>
